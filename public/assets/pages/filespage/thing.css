@@ -197,12 +197,14 @@
 .list > .component_thing.view-grid .info_extension span {
     background: var(--color);
     color: var(--bg-color);
+    font-weight: bold;
     border-radius: 4px;
     padding: 2px 10px;
     display: inline-block;
     text-align: center;
     min-width: 20px;
     max-width: 65px;
+    font-size: 0.95em;
 }
 .list > .component_thing .info_extension span:empty {
     display: none;
