@@ -6,8 +6,8 @@ import t from "../../locales/index.js";
 import ctrlError from "../ctrl_error.js";
 
 import { transition } from "./common.js";
+import { renderMenubar } from "./component_menubar.js";
 import "../../components/icon.js";
-import "./component_menubar.js";
 
 export default async function(render, { acl$, getFilename, getDownloadUrl, hasMenubar = true }) {
     const $page = createElement(`
@@ -20,6 +20,7 @@ export default async function(render, { acl$, getFilename, getDownloadUrl, hasMe
         </div>
     `);
     render(transition($page));
+    renderMenubar(qs($page, "component-menubar"));
 
     const $link = qs($page, "a");
     const $loading = qs($page, "component-icon");
